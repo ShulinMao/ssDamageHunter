@@ -1,0 +1,29 @@
+Package: ssDamageHunter
+Type: Package
+Title: Single-Stranded DNA Damage Calling from PTA-Based Single-Cell WGS
+Version: 0.1.0
+Authors@R: person("Shulin", "Mao", email = "shulin_mao@fas.harvard.edu",
+                  role = c("aut", "cre"))
+Description: Identifies single-stranded DNA damage in single-cell whole-genome sequencing data. Starting from
+    the somatic candidate set, each candidate is assigned
+    likelihoods under three competing hypotheses -- a double-stranded somatic
+    mutation, single-stranded damage present on only one strand, and an
+    amplification or sequencing error -- and classified accordingly. Also
+    provides detection-sensitivity and effective-callable-region estimation for
+    converting counts into per-genome burdens.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends: R (>= 4.0)
+Imports:
+    dplyr,
+    magrittr,
+    rlang,
+    stats,
+    stringr
+Suggests:
+    scan2,
+    testthat (>= 3.0.0)
+Remotes:
+    parklab/r-scan2
+Config/testthat/edition: 3
+RoxygenNote: 7.3.2

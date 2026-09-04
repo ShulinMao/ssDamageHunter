@@ -1,0 +1,22 @@
+# Results and intermediate data are not tracked
+results/
+results_new/
+*.rds
+*.rda
+*.RData
+
+# Figures
+*.pdf
+*.png
+
+# R
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+src/*.o
+src/*.so
+
+# Regenerated example output
+data-raw/*.Rout
