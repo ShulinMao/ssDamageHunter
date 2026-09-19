@@ -31,7 +31,7 @@ damage <- single_strand_damage_filter(candidates)
 `recurrent_site_filter(candidates, damage)` adds the cross-cell filter once you
 have more than one cell.
 
-To turn counts into a burden, divide by the effective callable region size: the
+To estimate a burden, divide by the effective callable region size: the
 callable genome weighted by the chance of detecting a single-stranded event at
 each depth.
 
@@ -41,10 +41,6 @@ detect   <- prob_detect_ss_damage(results, "snv")
 
 effective_callable_region_size(callable, detect)
 ```
-
-`prob_detect_ss_damage()` samples heterozygous germline sites to estimate the
-cell's allele balance distribution, so call `set.seed()` first if you need the
-result to be reproducible.
 
 ## Method
 
