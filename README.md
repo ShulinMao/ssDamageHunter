@@ -10,6 +10,7 @@ inst/scripts/    command-line entry point
 inst/extdata/    synthetic example data
 data-raw/        regenerates the example
 tests/           unit tests
+analysis/        manuscript analyses
 ```
 
 ## Install
@@ -92,6 +93,23 @@ types:
   cell_A  chr1  1100000 indel      60    16 0.267
   cell_B  chr1  1175000 indel      56    14 0.25
   cell_C  chr1  1225000 indel      96    24 0.25
+```
+
+## Analysis scripts
+
+`analysis/` holds the analysis scripts for the paper, plus the plotting helpers
+they share (`utils.R`). They are not part of the package, so clone the
+repository to get them.
+
+Extra packages they need:
+
+```r
+install.packages(c(
+  "dplyr", "ggbreak", "ggeffects", "ggh4x", "ggplot2", "ggpubr", "ggsci",
+  "glmmTMB", "Hmisc", "lme4", "lmerTest", "mgcv", "readxl", "reshape2",
+  "rstatix", "scales", "stringr", "tibble", "tidyr"))
+
+BiocManager::install(c("BSgenome.Hsapiens.UCSC.hg19", "MutationalPatterns"))
 ```
 
 ## License
